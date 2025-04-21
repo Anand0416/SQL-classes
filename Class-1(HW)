@@ -1,0 +1,21 @@
+SQL Class -1 Home Work
+* Write SQL queries for the following:
+
+1. Print all movie titles and release year for all Marvel Studios movies.
+2. Print all movies that have Avenger in their name.
+3. Print the year when the movie "The Godfather" was released.
+4. Print all distinct movie studios in the Bollywood industry. */
+
+use movidedb;
+
+# 1. Print all movie titles and release year for all Marvel Studios movies.
+Select title, release_year, studio from movies where studio = "Marvel Studios";
+
+#2. 2. Print all movies that have Avenger in their name.
+Select title from movies where title like "%Avenger%";
+
+#3. Print the year when the movie "The Godfather" was released.
+Select release_year, title from movies where title = "The Godfather";
+
+#4. Print all distinct movie studios in the Bollywood industry
+Select distinct studio, industry from movies where industry = "Bollywood";
